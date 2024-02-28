@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticker 1 - Stickerzone</title>
+    <style>
+        /* Your existing styles (from the main CSS) can go here */
+
+        /* Additional styles specific to this page */
+        .sticker-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .buy-button {
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 10000px;
+            margin: 0 auto;
+            padding: 0px;
+            background-color: #fff;
+            box-shadow: 0 px 6px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav-right {
+            float: right;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 10000000px;
+            margin: 0 auto;
+            padding: 0px;
+            background-color: #fff;
+            box-shadow: 0 px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sticker 2 Details</h1>
+        </header>
+        <div class="topnav">
+            <a class="active" href="home.html">Back</a>
+        </div>
+        <img src="amir2.jpg" alt="Sticker 1" width="200" height="150">
+        <section class="sticker-info">
+            <h2>Sticker 2 Description</h2>
+            <p>Price: 10T</p>
+            <p>Step up your style with Shoessticker! Elevate your footwear game with our exclusive Shoessticker. Designed to make a statement, this sticker adds flair and personality to any pair of shoes. Whether you’re rocking sneakers, loafers, or heels, the Shoessticker is the perfect accessory. Stick it on your shoe’s tongue, heel, or side for a touch of individuality. Get ready to turn heads and step out in style. Shoessticker: Because every step should be extraordinary! 👟🔥</p>
+
+            <!-- Add any other relevant information -->
+        </section>
+
+        <a href="checkout.html" class="buy-button">Buy Now</a>
+
+        <footer>
+            © 2024 Stickerzone. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
