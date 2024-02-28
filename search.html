@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticker Zone Search</title>
+    <style>
+        body {
+            background-color: #f9f9f9; /* Set your desired background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav-right {
+            float: right;
+        }
+header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+     
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+           
+        }
+
+        .container {
+            max-width: 10000px;
+            margin: 0 auto;
+            padding: 0px;
+            background-color: #fff;
+            box-shadow: 0 px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Add any additional styling for the Search page here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sticker Zone</h1>
+            <div class="topnav">
+                <a class="active" href="home.html">Home</a>
+                <a href="news.html">News</a>
+                <a href="contact.html">Contact</a>
+                <div class="topnav-right">
+                    <a href="search.html">Search</a>
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </header>
+        <div class="topnav">
+            <!-- Your navigation links go here -->
+        </div>
+
+        <section>
+            <h2>Search Stickers</h2>
+            <form action="about.html" method="get">
+                <input type="text" id="search" name="q" placeholder="Search Stickers...">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <footer>
+            © 2024 Sticker Zone. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
