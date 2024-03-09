@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stickerzone - Your Sticker Shop</title>
     <style>
+         #basket {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        #selected-stickers {
+            list-style: none;
+        }
 		 .topnav {
             overflow: hidden;
             background-color: #333;
@@ -80,6 +89,15 @@
             font-size: 16px;
             cursor: pointer;
         }
+        .remove-botton{
+            background-color: #e41538;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+
+        }
         .container {
             max-width: 10000px;
             margin: 0 auto;
@@ -114,6 +132,8 @@
         <a href="news.html">News</a>
         <a href="contact.html">Contact</a>
         <div class="topnav-right">
+            <a class="active" href="login.html">Login</a>
+            <a class="active" href="register.html">Register</a>
             <a href="search.html">Search</a>
             <a href="about.html">About</a>
         </div>
@@ -124,7 +144,7 @@
         <div class="sticker-box">
          
              <img src="amir4.jpg" alt="Sticker 1" width="200" height="150">
-        <a href="sticker1.html" class="buy-button">Buy</a>
+             <button class="buy-button" onclick="addToBasket('Sticker 1', 5)">Buy</button>
             <div class="sticker-caption">
                 <p>Sticker 1 Description</p>
                 <p>Price: 5T</p>
@@ -134,7 +154,7 @@
         <!-- Additional Sticker Boxes -->
         <div class="sticker-box">
             <img src="amir2.jpg" alt="Sticker 2" width="200" height="150">
-            <a href="sticker2.html" class="buy-button">Buy</a>
+            <button class="buy-button" onclick="addToBasket('Sticker 2', 10)">Buy</button>
             <div class="sticker-caption">
                 <p>Sticker 2 Description</p>
                 <p>Price: 10T</p>
@@ -143,7 +163,7 @@
 
         <div class="sticker-box">
             <img src="amir3.jpg" alt="Sticker 3" width="200" height="150">
-            <a href="sticker3.html" class="buy-button">Buy</a>
+            <button class="buy-button" onclick="addToBasket('Sticker 3', 8)">Buy</button>
             <div class="sticker-caption">
                 <p>Sticker 3 Description</p>
                 <p>Price: 8T</p>
@@ -151,9 +171,57 @@
         </div>
         <!-- End of Additional Sticker Boxes -->
     </section>
+      <!-- Shopping Cart Section -->
+      
+
+      <section id="basket">
+        <h2>Your Basket</h2>
+        <ul id="selected-stickers"></ul>
+        <p>Total Price: <span id="total-price">0T</span></p>
+    </section>
+    <script>
+        const basket = []; // Initialize an empty basket
+
+        function addToBasket(stickerName, price) {
+            basket.push({ name: stickerName, price: price });
+            updateBasket();
+        }
+        function removeFromBasket(stickerName) {
+            const index = basket.findIndex(item => item.name === stickerName);
+            if (index !== -1) {
+                basket.splice(index, 1);
+                updateBasket();
+            }
+        }
+
+
+        function updateBasket() {
+            const basketList = document.getElementById('selected-stickers');
+            const totalPrice = document.getElementById('total-price');
+            basketList.innerHTML = ''; // Clear existing list
+            let total = 0;
+            basket.forEach((sticker) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${sticker.name} - ${sticker.price}T`;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.className = "remove-botton";
+                removeButton.onclick = () => removeFromBasket(sticker.name);
+                listItem.appendChild(removeButton);
+                basketList.appendChild(listItem);
+                total += sticker.price;
+            });
+
+            totalPrice.textContent = `${total}T`;
+        }
+    </script>
 
     <footer>
         © 2024 Stickerzone. All rights reserved.
+    </footer>
+</body>
+</html>
+
     </footer>
 </body>
 </html>
